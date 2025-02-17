@@ -1,27 +1,74 @@
-# StorybookSample
+# Angular App with Storybook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+This project is a simple Angular application showcasing an input component using Storybook.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16 or later recommended)
+- [Angular CLI](https://angular.io/cli)
+- [Storybook](https://storybook.js.org/)
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone the repository and install dependencies:
+```sh
+npm install
+```
 
-## Build
+## Running the Angular App
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To start the Angular development server:
+```sh
+ng serve
+```
 
-## Running unit tests
+## Setting Up and Running Storybook
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+If Storybook is not already installed, initialize it:
+```sh
+npx storybook@latest init --builder webpack5
+```
 
-## Running end-to-end tests
+To run Storybook:
+```sh
+npm run storybook
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Input Component
 
-## Further help
+The project includes a simple input component located in:
+```
+src/app/components/input/input.component.ts
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Example Usage
+```html
+<app-input label="Username" placeholder="Enter your username" type="text"></app-input>
+```
+
+## Storybook Preview
+
+The input component is showcased in Storybook with customizable controls. You can find the story definition in:
+```
+src/stories/input.component.stories.ts
+```
+
+## Troubleshooting
+
+If you encounter any dependency issues, try:
+```sh
+rm -rf node_modules package-lock.json
+npm install
+npm run storybook
+```
+
+Ensure your TypeScript version is up to date:
+```sh
+npm install typescript@latest --save-dev
+```
+
+## License
+
+This project is licensed under the MIT License.
+
